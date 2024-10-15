@@ -1,0 +1,57 @@
+{
+  "name": "koala-hacker-news",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.12.1",
+  "description": "starter next app",
+  "author": "Brendan Dash <me@aiwna.run> (https://github.com/Debbl/)",
+  "license": "MIT",
+  "homepage": "https://github.com/Debbl/koala-hacker-news",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Debbl/koala-hacker-news.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "ANALYZE=true next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@nextui-org/react": "^2.4.8",
+    "date-fns": "^4.1.0",
+    "ejs": "^3.1.10",
+    "framer-motion": "^11.11.8",
+    "next": "^14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rss": "^1.2.2"
+  },
+  "devDependencies": {
+    "@debbl/eslint-config": "^3.8.1",
+    "@next/bundle-analyzer": "^14.2.15",
+    "@types/ejs": "^3.1.5",
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@types/rss": "^0.0.32",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.12.0",
+    "lint-staged": "^15.2.10",
+    "postcss": "^8.4.47",
+    "simple-git-hooks": "^2.11.1",
+    "tailwindcss": "^3.4.13",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
