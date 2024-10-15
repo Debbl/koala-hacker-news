@@ -1,10 +1,16 @@
 "use client";
+import { useGitHubInfo } from "@debbl/ahooks";
 import { format } from "date-fns";
 import DATA from "../data/data.json";
 
 export default function Home() {
+  const { GitHubInfo } = useGitHubInfo(
+    "https://github.com/Debbl/koala-hacker-news",
+  );
+
   return (
     <main className="h-full">
+      <GitHubInfo className="fixed right-2 top-2 size-4" />
       <div className="mt-12 pl-12">
         {DATA.map((i) => (
           <div className="mt-8" key={i.bvid}>

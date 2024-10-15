@@ -1,3 +1,4 @@
+import { formatISO } from "date-fns";
 import ejs from "ejs";
 import RSS from "rss";
 import DATA from "../../data/data.json";
@@ -99,7 +100,8 @@ export async function GET() {
       title: item.title,
       description: item.desc,
       url: `https://www.bilibili.com/video/${item.bvid}`,
-      date: new Date(item.date * 1000),
+      date: formatISO(new Date(item.date * 1000)),
+      guid: item.bvid,
       enclosure: {
         url: item.pic,
       },
