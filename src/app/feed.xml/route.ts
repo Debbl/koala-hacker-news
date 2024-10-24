@@ -76,8 +76,7 @@ export async function GET() {
   const rss = new RSS({
     title: "koala聊开源",
     description: "koala聊开源 rss 订阅源",
-    site_url:
-      "https://space.bilibili.com/489667127/channel/collectiondetail?sid=249279",
+    site_url: "https://koala-hacker-news.netlify.app/",
     feed_url: "https//koala-hacker-news.aiwan.run/feed.xml",
     language: "zh-CN",
     generator: "PHP 9.0",
