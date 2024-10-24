@@ -26,18 +26,24 @@ export default function Home() {
 
             <p className="mt-2 text-xs text-gray-500">{i.desc}</p>
 
-            <table className="mt-4 table-fixed">
+            <table className="mt-4 border-separate border">
               <thead>
                 <tr>
-                  <th scope="col">时间轴</th>
-                  <th scope="col">简介</th>
-                  <th scope="col">链接</th>
+                  <th className="border px-6" scope="col">
+                    时间轴
+                  </th>
+                  <th className="border" scope="col">
+                    简介
+                  </th>
+                  <th className="border" scope="col">
+                    链接
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {i.hn_items.times.map((time, index) => (
                   <tr key={index}>
-                    <td>
+                    <td className="border text-center">
                       <a
                         href={`https://www.bilibili.com/video/${i.bvid}?t=${
                           time.minutes * 60 + time.seconds
@@ -47,8 +53,8 @@ export default function Home() {
                         {`${time.seconds}`.padStart(2, "0")}
                       </a>
                     </td>
-                    <td>{i.hn_items.introduces[index]}</td>
-                    <td>
+                    <td className="border">{i.hn_items.introduces[index]}</td>
+                    <td className="border">
                       {Array.isArray(i.hn_items.links[index]) ? (
                         i.hn_items.links[index]?.map((link, j) => (
                           <a href={link} key={j}>
