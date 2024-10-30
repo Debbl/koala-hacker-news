@@ -80,18 +80,18 @@ export async function GET() {
     feed_url: "https//koala-hacker-news.aiwan.run/feed.xml",
     language: "zh-CN",
     generator: "PHP 9.0",
-    // custom_elements: [
-    //   {
-    //     follow_challenge: [
-    //       {
-    //         feedId: "67028040212142080",
-    //       },
-    //       {
-    //         userId: "55825808031657984",
-    //       },
-    //     ],
-    //   },
-    // ],
+    custom_elements: [
+      {
+        follow_challenge: [
+          {
+            feedId: "72108971072176128",
+          },
+          {
+            userId: "67839718245475328",
+          },
+        ],
+      },
+    ],
   });
 
   DATA.forEach((item) => {
