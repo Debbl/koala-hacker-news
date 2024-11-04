@@ -1,3 +1,5 @@
+The official https://koala-oss.app/rss.xml rss link
+
 # koala-hacker-news
 
 - https://koala-hacker-news.aiwan.run/feed.xml
